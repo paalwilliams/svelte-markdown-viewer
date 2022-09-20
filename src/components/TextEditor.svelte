@@ -1,11 +1,12 @@
 <script lang="ts">
 	export let rawText: string;
+	export let editorEl;
 	const updateState = (e: Event) => {
 		rawText = (e.target as HTMLTextAreaElement).value;
 	};
 </script>
 
-<textarea id="markdownEditor" value={rawText} on:input={updateState} />
+<textarea id="markdownEditor" value={rawText} bind:this={editorEl} on:input={updateState} />
 
 <style>
 	textarea#markdownEditor {

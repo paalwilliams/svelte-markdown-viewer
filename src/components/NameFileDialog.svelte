@@ -35,7 +35,7 @@
 		</div>
 	</Content>
 	<Actions>
-		<Button action="accept" on:click={handleSubmit}>
+		<Button action="accept" on:click={handleSubmit} disabled={false}>
 			<Label>Done</Label>
 		</Button>
 	</Actions>
